@@ -24,6 +24,8 @@
 
     RTMainController *mainController = [[RTMainController alloc] init];
     [mainController start];
+    
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

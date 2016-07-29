@@ -19,5 +19,6 @@
 @property (nonatomic, strong) NSString *twitterPassword;
 @property (nonatomic, strong) NSString *searchWaitingForReview;
 @property (nonatomic, strong) NSString *searchReadyForSale;
+@property (nonatomic, strong) NSString *searchPendingDeveloperRelease;
 
 @end

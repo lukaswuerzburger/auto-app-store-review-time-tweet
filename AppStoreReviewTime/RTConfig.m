@@ -81,4 +81,9 @@
     return [config valueForKeyPath:@"search.readyForSale"];
 }
 
+- (NSString *)searchPendingDeveloperRelease {
+    return [config valueForKeyPath:@"search.pendingDeveloperRelease"];
+}
+
+
 @end
