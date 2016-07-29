@@ -15,11 +15,12 @@
 @interface RTWatchService () {
 
     NSString *waitingForReviewSearchString;
+    NSString *pendingDeveloperReleaseSearchString;
     NSString *readyForSaleSearchString;
+    
     NSString *folder;
     
     NSDate *lastDateWaitingForReview;
-    NSDate *lastDateReadyForSale;
     
     MCOIMAPSession *currentSession;
 }
@@ -45,6 +46,7 @@
         RTConfig *config = [[RTConfig alloc] init];
         
         waitingForReviewSearchString = config.searchWaitingForReview;
+        pendingDeveloperReleaseSearchString = config.searchPendingDeveloperRelease;
         readyForSaleSearchString = config.searchReadyForSale;
         folder = config.mailFolder;
         
@@ -76,15 +78,22 @@
 - (void)fetchLastResultWithBlock:(void (^)(NSDate *waitingForReviewDate, NSDate *readyForSaleDate))block {
     
     [self searchMessagesByString:waitingForReviewSearchString block:^(NSDate *date) {
-        
         lastDateWaitingForReview = date;
+        
         [self searchMessagesByString:readyForSaleSearchString block:^(NSDate *date) {
-            
-            lastDateReadyForSale = date;
-            if (block) {
-                block(lastDateWaitingForReview, lastDateReadyForSale);
+            if (date) {
+                if (block) {
+                    block(lastDateWaitingForReview, date);
+                }
+            } else {
+                [self searchMessagesByString:readyForSaleSearchString block:^(NSDate *date) {
+                    if (block) {
+                        block(lastDateWaitingForReview, date);
+                    }
+                }];
             }
         }];
+        
     }];
 }
 
@@ -94,19 +103,26 @@
     MCOIMAPSearchOperation *searchOperation = [currentSession searchOperationWithFolder:folder kind:requestKind searchString:string];
     [searchOperation start:^(NSError * _Nullable error, MCOIndexSet * _Nullable searchResult) {
         
-        MCOIMAPMessagesRequestKind requestKind = (MCOIMAPMessagesRequestKindHeaders);
-        MCOIMAPFetchMessagesOperation *messagesOperation = [currentSession fetchMessagesOperationWithFolder:folder requestKind:requestKind uids:searchResult];
-        [messagesOperation start:^(NSError * _Nullable error, NSArray * _Nullable messages, MCOIndexSet * _Nullable vanishedMessages) {
-            
-            NSDate *date;
-            if (messages.count > 0) {
-                MCOIMAPMessage *message = messages.lastObject;
-                date = message.header.receivedDate;
-            }
+        if (error) {
             if (block) {
-                block(date);
+                block(nil);
             }
-        }];
+        } else {
+            
+            MCOIMAPMessagesRequestKind requestKind = (MCOIMAPMessagesRequestKindHeaders);
+            MCOIMAPFetchMessagesOperation *messagesOperation = [currentSession fetchMessagesOperationWithFolder:folder requestKind:requestKind uids:searchResult];
+            [messagesOperation start:^(NSError * _Nullable error, NSArray * _Nullable messages, MCOIndexSet * _Nullable vanishedMessages) {
+                
+                NSDate *date;
+                if (messages.count > 0) {
+                    MCOIMAPMessage *message = messages.lastObject;
+                    date = message.header.receivedDate;
+                }
+                if (block) {
+                    block(date);
+                }
+            }];
+        }
     }];
 }
 
