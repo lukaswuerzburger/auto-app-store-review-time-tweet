@@ -80,7 +80,7 @@
     [self searchMessagesByString:waitingForReviewSearchString block:^(NSDate *date) {
         lastDateWaitingForReview = date;
         
-        [self searchMessagesByString:readyForSaleSearchString block:^(NSDate *date) {
+        [self searchMessagesByString:pendingDeveloperReleaseSearchString block:^(NSDate *date) {
             if (date) {
                 if (block) {
                     block(lastDateWaitingForReview, date);
