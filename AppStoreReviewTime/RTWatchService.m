@@ -55,14 +55,6 @@
     return self;
 }
 
-- (NSDictionary *)defaultConfigFile {
-    
-    NSString *fileName = @"asrt-watcher-rc.plist";
-    NSString *homeDirectory = NSHomeDirectory();
-    NSString *filePath = [NSString stringWithFormat:@"%@/%@", homeDirectory, fileName];
-    return [NSDictionary dictionaryWithContentsOfFile:filePath];
-}
-
 - (MCOIMAPSession *)sessionFromConfig:(RTConfig *)config {
     
     MCOIMAPSession *session = [[MCOIMAPSession alloc] init];

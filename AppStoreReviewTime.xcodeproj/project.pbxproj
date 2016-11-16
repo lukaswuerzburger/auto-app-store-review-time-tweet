@@ -15,6 +15,11 @@
 		213385AA1D0709F500F24C2D /* RTWatchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 213385A91D0709F500F24C2D /* RTWatchService.m */; };
 		213385AE1D0723BB00F24C2D /* RTTwitterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 213385AD1D0723BB00F24C2D /* RTTwitterService.m */; };
 		213385B21D07248300F24C2D /* RTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 213385B11D07248300F24C2D /* RTConfig.m */; };
+		80AC53911DDD17F5000C41CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC53901DDD17F5000C41CD /* AppDelegate.swift */; };
+		80AC53931DDD187B000C41CD /* RTMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC53921DDD187B000C41CD /* RTMainController.swift */; };
+		80AC53951DDD1A4E000C41CD /* RTWatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC53941DDD1A4E000C41CD /* RTWatchService.swift */; };
+		80AC53971DDD1A84000C41CD /* RTTwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC53961DDD1A84000C41CD /* RTTwitterService.swift */; };
+		80AC53991DDD1A90000C41CD /* RTConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC53981DDD1A90000C41CD /* RTConfig.swift */; };
 		A4F3FC33A4C0332E6E2E09A3 /* libPods-AppStoreReviewTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5150091EBD4B3FFCF5C9BF6 /* libPods-AppStoreReviewTime.a */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +40,12 @@
 		213385AD1D0723BB00F24C2D /* RTTwitterService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTTwitterService.m; sourceTree = "<group>"; };
 		213385B01D07248300F24C2D /* RTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTConfig.h; sourceTree = "<group>"; };
 		213385B11D07248300F24C2D /* RTConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTConfig.m; sourceTree = "<group>"; };
+		80AC538F1DDD17F4000C41CD /* AppStoreReviewTime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppStoreReviewTime-Bridging-Header.h"; sourceTree = "<group>"; };
+		80AC53901DDD17F5000C41CD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		80AC53921DDD187B000C41CD /* RTMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTMainController.swift; sourceTree = "<group>"; };
+		80AC53941DDD1A4E000C41CD /* RTWatchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTWatchService.swift; sourceTree = "<group>"; };
+		80AC53961DDD1A84000C41CD /* RTTwitterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTTwitterService.swift; sourceTree = "<group>"; };
+		80AC53981DDD1A90000C41CD /* RTConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTConfig.swift; sourceTree = "<group>"; };
 		B5150091EBD4B3FFCF5C9BF6 /* libPods-AppStoreReviewTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppStoreReviewTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C271170E6427A71449688E41 /* Pods-AppStoreReviewTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStoreReviewTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppStoreReviewTime/Pods-AppStoreReviewTime.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,12 +91,18 @@
 		213385911D0707B600F24C2D /* AppStoreReviewTime */ = {
 			isa = PBXGroup;
 			children = (
+				80AC53901DDD17F5000C41CD /* AppDelegate.swift */,
+				80AC53921DDD187B000C41CD /* RTMainController.swift */,
+				80AC53941DDD1A4E000C41CD /* RTWatchService.swift */,
+				80AC53961DDD1A84000C41CD /* RTTwitterService.swift */,
+				80AC53981DDD1A90000C41CD /* RTConfig.swift */,
 				213385921D0707B600F24C2D /* AppDelegate.h */,
 				213385931D0707B600F24C2D /* AppDelegate.m */,
 				213385A31D07092A00F24C2D /* Controllers */,
 				213385A71D0709D400F24C2D /* Service */,
 				213385AF1D07247600F24C2D /* Helper */,
 				213385951D0707B600F24C2D /* Supporting Files */,
+				80AC538F1DDD17F4000C41CD /* AppStoreReviewTime-Bridging-Header.h */,
 			);
 			path = AppStoreReviewTime;
 			sourceTree = "<group>";
@@ -146,12 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 213385A01D0707B600F24C2D /* Build configuration list for PBXNativeTarget "AppStoreReviewTime" */;
 			buildPhases = (
-				BFB6C4FAD439547C09E9FA1B /* Check Pods Manifest.lock */,
+				BFB6C4FAD439547C09E9FA1B /* [CP] Check Pods Manifest.lock */,
 				2133858B1D0707B500F24C2D /* Sources */,
 				2133858C1D0707B500F24C2D /* Frameworks */,
 				2133858D1D0707B500F24C2D /* Resources */,
-				25C075B8191E69E29504D12E /* Embed Pods Frameworks */,
-				FD83B688BB53D9DEF8DA9C2C /* Copy Pods Resources */,
+				25C075B8191E69E29504D12E /* [CP] Embed Pods Frameworks */,
+				FD83B688BB53D9DEF8DA9C2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,6 +190,7 @@
 				TargetAttributes = {
 					2133858E1D0707B500F24C2D = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -207,14 +225,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		25C075B8191E69E29504D12E /* Embed Pods Frameworks */ = {
+		25C075B8191E69E29504D12E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,14 +240,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppStoreReviewTime/Pods-AppStoreReviewTime-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BFB6C4FAD439547C09E9FA1B /* Check Pods Manifest.lock */ = {
+		BFB6C4FAD439547C09E9FA1B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,14 +255,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FD83B688BB53D9DEF8DA9C2C /* Copy Pods Resources */ = {
+		FD83B688BB53D9DEF8DA9C2C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,10 +277,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80AC53931DDD187B000C41CD /* RTMainController.swift in Sources */,
 				213385971D0707B600F24C2D /* main.m in Sources */,
 				213385AA1D0709F500F24C2D /* RTWatchService.m in Sources */,
 				213385AE1D0723BB00F24C2D /* RTTwitterService.m in Sources */,
 				213385B21D07248300F24C2D /* RTConfig.m in Sources */,
+				80AC53971DDD1A84000C41CD /* RTTwitterService.swift in Sources */,
+				80AC53951DDD1A4E000C41CD /* RTWatchService.swift in Sources */,
+				80AC53991DDD1A90000C41CD /* RTConfig.swift in Sources */,
+				80AC53911DDD17F5000C41CD /* AppDelegate.swift in Sources */,
 				213385A61D07094D00F24C2D /* RTMainController.m in Sources */,
 				213385941D0707B600F24C2D /* AppDelegate.m in Sources */,
 			);
@@ -368,11 +391,15 @@
 			baseConfigurationReference = C271170E6427A71449688E41 /* Pods-AppStoreReviewTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AppStoreReviewTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.AppStoreReviewTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppStoreReviewTime/AppStoreReviewTime-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -381,11 +408,14 @@
 			baseConfigurationReference = 0EB7E1593F6D3876C1268647 /* Pods-AppStoreReviewTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AppStoreReviewTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.AppStoreReviewTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppStoreReviewTime/AppStoreReviewTime-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
