@@ -5,6 +5,7 @@
 
 target 'AppStoreReviewTime' do
 
+pod 'OpenSSL-OSX', '~> 1.0'
 pod 'mailcore2-osx', '~> 0.6'
 
 end

@@ -7,27 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		213385941D0707B600F24C2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 213385931D0707B600F24C2D /* AppDelegate.m */; };
 		213385971D0707B600F24C2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 213385961D0707B600F24C2D /* main.m */; };
 		213385991D0707B600F24C2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 213385981D0707B600F24C2D /* Assets.xcassets */; };
 		2133859C1D0707B600F24C2D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2133859A1D0707B600F24C2D /* MainMenu.xib */; };
-		213385A61D07094D00F24C2D /* RTMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213385A51D07094D00F24C2D /* RTMainController.m */; };
-		213385AA1D0709F500F24C2D /* RTWatchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 213385A91D0709F500F24C2D /* RTWatchService.m */; };
-		213385AE1D0723BB00F24C2D /* RTTwitterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 213385AD1D0723BB00F24C2D /* RTTwitterService.m */; };
-		213385B21D07248300F24C2D /* RTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 213385B11D07248300F24C2D /* RTConfig.m */; };
 		80AC53911DDD17F5000C41CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC53901DDD17F5000C41CD /* AppDelegate.swift */; };
 		80AC53931DDD187B000C41CD /* RTMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC53921DDD187B000C41CD /* RTMainController.swift */; };
 		80AC53951DDD1A4E000C41CD /* RTWatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC53941DDD1A4E000C41CD /* RTWatchService.swift */; };
 		80AC53971DDD1A84000C41CD /* RTTwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC53961DDD1A84000C41CD /* RTTwitterService.swift */; };
 		80AC53991DDD1A90000C41CD /* RTConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC53981DDD1A90000C41CD /* RTConfig.swift */; };
+		80AC539B1DDDDBE5000C41CD /* MCOIMAPSession+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC539A1DDDDBE5000C41CD /* MCOIMAPSession+Config.swift */; };
 		A4F3FC33A4C0332E6E2E09A3 /* libPods-AppStoreReviewTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5150091EBD4B3FFCF5C9BF6 /* libPods-AppStoreReviewTime.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0EB7E1593F6D3876C1268647 /* Pods-AppStoreReviewTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStoreReviewTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppStoreReviewTime/Pods-AppStoreReviewTime.release.xcconfig"; sourceTree = "<group>"; };
 		2133858F1D0707B600F24C2D /* AppStoreReviewTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreReviewTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		213385921D0707B600F24C2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		213385931D0707B600F24C2D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		213385961D0707B600F24C2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		213385981D0707B600F24C2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2133859B1D0707B600F24C2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -46,6 +40,7 @@
 		80AC53941DDD1A4E000C41CD /* RTWatchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTWatchService.swift; sourceTree = "<group>"; };
 		80AC53961DDD1A84000C41CD /* RTTwitterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTTwitterService.swift; sourceTree = "<group>"; };
 		80AC53981DDD1A90000C41CD /* RTConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTConfig.swift; sourceTree = "<group>"; };
+		80AC539A1DDDDBE5000C41CD /* MCOIMAPSession+Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MCOIMAPSession+Config.swift"; sourceTree = "<group>"; };
 		B5150091EBD4B3FFCF5C9BF6 /* libPods-AppStoreReviewTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppStoreReviewTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C271170E6427A71449688E41 /* Pods-AppStoreReviewTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStoreReviewTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppStoreReviewTime/Pods-AppStoreReviewTime.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,8 +91,7 @@
 				80AC53941DDD1A4E000C41CD /* RTWatchService.swift */,
 				80AC53961DDD1A84000C41CD /* RTTwitterService.swift */,
 				80AC53981DDD1A90000C41CD /* RTConfig.swift */,
-				213385921D0707B600F24C2D /* AppDelegate.h */,
-				213385931D0707B600F24C2D /* AppDelegate.m */,
+				80AC539A1DDDDBE5000C41CD /* MCOIMAPSession+Config.swift */,
 				213385A31D07092A00F24C2D /* Controllers */,
 				213385A71D0709D400F24C2D /* Service */,
 				213385AF1D07247600F24C2D /* Helper */,
@@ -185,7 +179,7 @@
 		213385871D0707B500F24C2D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Truffls GmbH";
 				TargetAttributes = {
 					2133858E1D0707B500F24C2D = {
@@ -279,15 +273,11 @@
 			files = (
 				80AC53931DDD187B000C41CD /* RTMainController.swift in Sources */,
 				213385971D0707B600F24C2D /* main.m in Sources */,
-				213385AA1D0709F500F24C2D /* RTWatchService.m in Sources */,
-				213385AE1D0723BB00F24C2D /* RTTwitterService.m in Sources */,
-				213385B21D07248300F24C2D /* RTConfig.m in Sources */,
 				80AC53971DDD1A84000C41CD /* RTTwitterService.swift in Sources */,
 				80AC53951DDD1A4E000C41CD /* RTWatchService.swift in Sources */,
 				80AC53991DDD1A90000C41CD /* RTConfig.swift in Sources */,
 				80AC53911DDD17F5000C41CD /* AppDelegate.swift in Sources */,
-				213385A61D07094D00F24C2D /* RTMainController.m in Sources */,
-				213385941D0707B600F24C2D /* AppDelegate.m in Sources */,
+				80AC539B1DDDDBE5000C41CD /* MCOIMAPSession+Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,8 +309,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -363,8 +355,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -383,6 +377,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};

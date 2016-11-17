@@ -13,16 +13,18 @@ class RTMainController: NSObject {
     // MARK: - Helper variables
     
     private var timer: Timer?
-//    private let watchService = RTWatchService.shared
+    private let watchService = RTWatchService.shared
     
     // MARK: - Interface
     
     func startWatchService() {
         
         // Let time interval be 1 hour = 3600 seconds
-        let timeInterval: TimeInterval = 3600
+        let timeInterval: TimeInterval = 35
         
         timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(handleTimerTick), userInfo: nil, repeats: true)
+        
+        handleTimerTick()
     }
     
     // MARK: - Timer
@@ -36,8 +38,18 @@ class RTMainController: NSObject {
     
     func checkReviewStatus() {
         
-//        watchService.fetchLastResult() { (start, end) in
-//            
-//        }
+        watchService.fetchLastResult() { (start, end) in
+            let startDate = start?.header.receivedDate
+            let endDate = end?.header.receivedDate
+            if let end = end {
+                self.watchService.extractAppContent(messageID: end.uid, block: { (name, version, id) in
+                    
+                    let duration = endDate!.timeIntervalSince1970 - startDate!.timeIntervalSince1970
+                    let days = round((duration/60/60/24)*100)/100
+                    
+                    print("TWITTER POST: \n\n\(name) (\(version))\nis now available in the App Store\nhttps://itunes.apple.com/app/id\(id)\n\(days) days #iosreviewtime")
+                })
+            }
+        }
     }
 }
