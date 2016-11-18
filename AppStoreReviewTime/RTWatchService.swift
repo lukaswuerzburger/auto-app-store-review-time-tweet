@@ -10,10 +10,6 @@ import Cocoa
 
 class RTWatchService {
 
-    // MARK: - Singleton
-    
-    static let shared = RTWatchService()
-
     // MARK: - Variables
     
     var currentMailSession: MCOIMAPSession?
